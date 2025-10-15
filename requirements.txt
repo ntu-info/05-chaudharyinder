@@ -1,16 +1,6 @@
-<<<<<<< HEAD
 Flask
 SQLAlchemy
 psycopg2-binary
 pyarrow
 pandas
 gunicorn
-=======
-Flask
-SQLAlchemy
-psycopg2-binary
-pyarrow
-pandas
-gunicorn
-
->>>>>>> 3a2c37722e4c1926778c0e22a2ce131602a67e85
