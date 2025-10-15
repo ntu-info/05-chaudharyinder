@@ -49,10 +49,12 @@ def create_app():
     def dissociate_terms(term_a: str, term_b: str):
         """
         Return studies that mention term_a but not term_b (A\B), and the reverse (B\A).
-        Terms are compared lowercase with underscores.
+        Terms are compared lowercase with underscores and a database-specific prefix.
         """
-        a = term_a.strip().lower().replace(" ", "_")
-        b = term_b.strip().lower().replace(" ", "_")
+        # CORRECTED: Add the prefix to match the database format
+        a = f"terms_abstract_tfidf__{term_a.strip().lower().replace(' ', '_')}"
+        b = f"terms_abstract_tfidf__{term_b.strip().lower().replace(' ', '_')}"
+    
         eng = get_engine()
 
         sql = text("""
