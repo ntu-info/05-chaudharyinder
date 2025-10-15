@@ -1,5 +1,7 @@
 Flask
-gunicorn
 SQLAlchemy
 psycopg2-binary
+pyarrow
+pandas
+gunicorn
 
